@@ -1,5 +1,5 @@
 site_name: ad se ipsum
-site_url: https://thomasht86.github.io/ad-se-ipsum/
+site_url: https://thomasht86.github.io
 plugins:
   - search
   - blog:
