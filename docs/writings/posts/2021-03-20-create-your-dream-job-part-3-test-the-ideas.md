@@ -20,6 +20,8 @@ tags:
 This is the third and final part of the article series "Create Your Dream Job."
 
 In part 1, I showed you some exercises aimed at increasing your self-awareness to explore opportunities that align with your unique strengths and preferences.
+<!-- more -->
+
 
 In part 2, you conducted a creative exercise intended to kick-start the thought process regarding how different versions of your future might look.
 

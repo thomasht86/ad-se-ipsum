@@ -16,6 +16,8 @@ date: 2021-02-26T00:00:00-07:00
 Updated: February 28, 2021
 
 Have you spent an hour in the past year considering how you invest your money? Whether you should invest in index funds or stocks? Setting up a retirement account? Creating a personal budget?
+<!-- more -->
+
 
 There is one resource I argue is far more important than money.
 

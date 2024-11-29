@@ -21,6 +21,8 @@ It should not surprise any of us if we look at the history of previous pandemics
 Visualization of Mortality from Historical Pandemics
 
 Source: Visual Capitalist
+<!-- more -->
+
 
 Virus outbreaks have been part of human reality from time to time since the beginning of our era.
 

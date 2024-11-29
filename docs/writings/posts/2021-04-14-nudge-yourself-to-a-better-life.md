@@ -14,6 +14,8 @@ tags:
 When I hear the term "nudge," my thoughts drift back to MSN Messenger, which was a popular chat application in the early 2000s. There, a user could "nudge" another to catch their attention.
 
 MSN Messenger - Anno 2004
+<!-- more -->
+
 
 The feeling of receiving a nudge was a bit irritating—a combination of a shaking window and an unpleasant sound—but it often resulted in attention being directed to the person who nudged.
 

@@ -19,6 +19,8 @@ Skip to the [end](#final-thoughts) for a link to the final result.
 ![Cover](/assets/images/Cover.jpg)
 
 ## Introduction
+<!-- more -->
+
 
 Back in 2017, I had an almost religious experience. I was walking to work with my noise-cancelling headphones on under the hood of my jacket. It was late in the winter, but early in the morning. The wet snow whipped my face, eventually making my cheeks and forehead numb from the cold. But the cold didn't affect me. I had started to build "an Inner Citadel", being grateful for the cold, and for the snow, and for everything that is. I realized that we have the power to choose how we feel about things, and that we can choose to be grateful for everything that is - Turning obstacles upside down, and regard every difficulty as an opportunity to grow. To cultivate character. To become a better person.
 

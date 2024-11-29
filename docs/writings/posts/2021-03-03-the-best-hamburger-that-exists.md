@@ -17,6 +17,8 @@ If you were expecting a food recipe when you clicked on this link, I must disapp
 It is an article about hamburgers as a metaphor.
 
 A metaphor for the goals we strive for and the choices we make in life. What drives our goals has an enormous impact on our quality of life over time.
+<!-- more -->
+
 
 I have had quite an incredible rollercoaster ride on my own journey in pursuit of various goals. The experiences have been incredibly varied.
 

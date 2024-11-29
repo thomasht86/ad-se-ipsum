@@ -17,6 +17,8 @@ The choice between the escalator and the stairs says a lot about who you are as 
 ---
 
 Have you ever taken the express train from Oslo to Gardermoen? 
+<!-- more -->
+
 
 Then you made a choice, either unconsciously or consciously.
 

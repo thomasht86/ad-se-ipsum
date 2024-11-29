@@ -16,6 +16,8 @@ Kukerundtsyndrom 2.0 is about the lack of progress not only in the gym but in li
 ## Introduction
 
 Ten years ago, Swedish fitness and nutrition guru Martin Berkhan wrote an article that went viral among fitness enthusiasts, where he introduced the concept of "Fuckarounditis" to express his frustration over gym rats lacking progress due to misplaced focus on their workouts. Kjetil Åmdal translated the article into Norwegian, and the term "Kukerundtsyndrom" was born. The article is still available on fitnessbloggen.no and can be read [here](https://fitnessbloggen.no).
+<!-- more -->
+
 
 In this article, I will build upon this concept and introduce Kukerundtsyndrom 2.0, which I believe is even more important to make the world aware of so we can prevent the epidemic together.
 

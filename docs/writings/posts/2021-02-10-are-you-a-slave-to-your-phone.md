@@ -22,6 +22,8 @@ The smartphone is a fantastic invention.
 - You can text anyone in an instant.
 - You can snap pictures of a quality that professional photographers only dreamed of a few years ago.
 - You can record video.
+<!-- more -->
+
 - You can get directions no matter where you’re going.
 - You can search for information about anything you’re curious about.
 - You can listen to audiobooks.

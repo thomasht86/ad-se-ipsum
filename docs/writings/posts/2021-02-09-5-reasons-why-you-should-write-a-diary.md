@@ -21,6 +21,8 @@ Discover the incredible effects of journaling and how it can help you develop in
 ## Table of Contents
 
 - [5 Reasons You Should Keep a Journal](#5-reasons-you-should-keep-a-journal)
+<!-- more -->
+
   - [1. It Gives You Direction](#1-it-gives-you-direction)
   - [2. It Gives You a Plan](#2-it-gives-you-a-plan)
   - [3. You Have a Place to Write Down Goals](#3-you-have-a-place-to-write-down-goals)

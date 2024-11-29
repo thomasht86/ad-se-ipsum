@@ -21,6 +21,8 @@ Do you feel like your job is a necessary evil? Learn how to transform your view 
 ## Table of Contents
 
 - [5 Steps to Thrive in Your Job](#5-steps-to-thrive-in-your-job)
+<!-- more -->
+
   - [Do You Should Change Jobs?](#do-you-should-change-jobs)
   - [What Can You Do to Transform Your View of Your Current Job?](#what-can-you-do-to-transform-your-view-of-your-current-job)
     - [1. Change Your Mindset](#1-change-your-mindset)

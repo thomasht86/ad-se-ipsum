@@ -13,6 +13,8 @@ date: 2022-06-05T00:00:00-07:00
 Updated: June 21, 2022
 
 This is a question I have been asked several times. It seems distant for many to run for many hours straight. It felt distant for me too, not many years ago.
+<!-- more -->
+
 
 "Why?" is a question I often ask myself.
 

@@ -16,6 +16,8 @@ Have you ever said any of the following sentences?
 - I don’t like exercising
 - I am not handy
 - I am not interested in long-term relationships
+<!-- more -->
+
 - I just love to relax
 
 Then chances are you are telling yourself a story about who you are that holds you back from creating the best version of yourself.

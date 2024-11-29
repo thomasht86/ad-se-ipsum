@@ -17,6 +17,8 @@ How will your life story look in a few years? Take responsibility and write your
 ---
 
 ## If you continue on your current path, how will your life story look in a few years?
+<!-- more -->
+
 
 Do you have a positive development in your quality of life? Or is it relatively stable?
 

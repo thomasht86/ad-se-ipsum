@@ -17,6 +17,8 @@ Worry is one of humanity's greatest mental challenges. Learn how to free up ment
 ## Table of Contents
 
 - [How to Get Rid of Worries](#how-to-get-rid-of-worries)
+<!-- more -->
+
   - [The Difference Lies in the Mind](#the-difference-lies-in-the-mind)
   - [Worry Analysis](#worry-analysis)
   - [Practice What You Fear](#practice-what-you-fear)

@@ -17,6 +17,8 @@ My son got this board game for christmas. 🎁🎄
 
 The premise is that you throw 14 dice, which can take a value between 1 and 15. 
 As you throw, you flip an hourglass, and you have about 60 seconds to place the dice 
+<!-- more -->
+
 on a board. The score is calculated by adding the values of the dice that are placed successfully.
 A placement is considered successful if an equation is correct.
 This is how a board could look like if you would throw the sequence `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]`:

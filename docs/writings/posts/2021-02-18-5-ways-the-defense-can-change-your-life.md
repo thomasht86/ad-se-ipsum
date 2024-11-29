@@ -16,6 +16,8 @@ The military has unique conditions to create real change in people. Here are fiv
 ---
 
 The military brings together people from all across the country and mixes them in a pot, adding predefined values and exposing them to stressful situations. I believe the result of this process is better individuals. Therefore, I argue that a term in the military would benefit nearly everyone. I will explain why.
+<!-- more -->
+
 
 In high school, I did not have a conscious relationship with my own values. I partied, fought, and messed around. I did not know who I wanted to be. I had a sense that there should be "something more." I lacked a clear direction in life.
 

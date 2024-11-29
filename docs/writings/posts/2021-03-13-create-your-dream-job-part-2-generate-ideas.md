@@ -21,6 +21,8 @@ In this part, you will use the insights about yourself to generate a plethora of
 ## Introduction
 
 The first part of this article series can be found here. 
+<!-- more -->
+
 There you will find exercises to get to know yourself and your strengths better.
 
 In this part, you will utilize this self-insight to generate a multitude of ideas for possible things you can work on.

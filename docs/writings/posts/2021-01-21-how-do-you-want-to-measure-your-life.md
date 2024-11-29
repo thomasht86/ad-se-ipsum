@@ -22,6 +22,8 @@ Have you ever thought about how you measure your life?
 ![Image of Lukas from Pexels](https://www.pexels.com/photo/person-holding-a-glass-ball-669610/)
 
 What determines whether you have lived a good life when your time on Earth is up?
+<!-- more -->
+
 
 If you've never considered this, maybe it's time? The time to become who you want to be is now. We never know how much time we have.
 

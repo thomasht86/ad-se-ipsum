@@ -11,6 +11,8 @@ tags:
   - decision-making
 ---
 In the mid-90s, we received a brochure in the mail from a sort of film club with an overview of the latest VHS releases. We had the option to order 4 of these films for a package price. I usually got to choose one of the 4. Once I picked *The Rock*. I remember how incredibly good I thought that movie was, and I watched it at least 10 times. The impression of *The Rock* as one of the greatest movies of all time still lingers. I felt like I had made a good choice — a choice that brought a sense of satisfaction both before, during, and after watching the film.
+<!-- more -->
+
 
 Fast forward 15 years.
 

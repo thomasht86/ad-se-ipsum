@@ -13,6 +13,8 @@ date: 2021-04-03T00:00:00-07:00
 # 3 Keys to a Good Relationship
 
 A romantic relationship can be incredibly rewarding and can serve as the foundation for a flourishing family. Here are three keys we have learned for creating a strong partnership.
+<!-- more -->
+
 
 ---
 

@@ -16,6 +16,8 @@ An introduction to the experience of flow based on personal experiences and how 
 ---
 
 ## Have You Ever Experienced Being Totally Engrossed in an Activity?
+<!-- more -->
+
 
 So engrossed that you forgot the time. Forgot to eat. Maybe even forgot that you had to go to the bathroom.
 

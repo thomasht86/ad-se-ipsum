@@ -16,6 +16,8 @@ date: 2021-03-31T00:00:00-07:00
 *-Abraham Maslow*
 
 The concept of self-actualization was popularized by Abraham Maslow and can be described as the human need to achieve one's highest potential. 
+<!-- more -->
+
 
 To become all that one can be.
 

@@ -17,6 +17,8 @@ An introduction to the circle of control and how you can train to gain control o
 ---
 
 ## Have you ever been irritated by something someone said or did?
+<!-- more -->
+
 
 Have you been upset over something you saw in the news, or perhaps a post on Facebook?
 

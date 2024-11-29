@@ -20,6 +20,8 @@ What is the key to the good life?
 What makes life worth living?
 
 Perhaps these are among the greatest and most important questions that exist?
+<!-- more -->
+
 
 Questions like this have been central to philosophy for thousands of years, and certainly long before that as well. In fact, so many people have thought and written about this that it can be a bit overwhelming for many of us. It is a start to see what wise people who have lived before us have written about this.
 

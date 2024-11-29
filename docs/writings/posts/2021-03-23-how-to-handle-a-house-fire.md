@@ -20,6 +20,8 @@ A personal account of a midnight house fire, and reflections on how to manage su
 ST Newspaper, March 22
 
 Around midnight on the night of Monday, March 22, I was deep in dreamland. Gradually, I noticed that my dream was increasingly about campfires and grilling. Eventually, I woke up a bit and noticed that the smell of smoke was still there. 
+<!-- more -->
+
 Had some neighbors lit a fire pit or something?
 The smell didn't go away, so finally, I left dreamland completely, aiming to investigate where the smell was coming from. I quickly realized that there was danger at hand. There was smoke in the room where I was lying, which is between the room where my wife and our youngest daughter and our 1.5-year-old son were sleeping. I was in the guest room sometimes to avoid being woken up by a hungry baby and breastfeeding. I really didn't have much to contribute on that front.
 
