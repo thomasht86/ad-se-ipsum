@@ -8,6 +8,7 @@ plugins:
       tags_file: tags.md
   - social:
       enabled: true
+  - marimo
 
 nav:
   - Home: index.md
@@ -79,3 +80,9 @@ extra:
     Python: python
     Coding: coding
     Philosophy: philosophy
+
+# Check that the build is successful
+build:
+  steps:
+    - name: Build the site
+      run: mkdocs build
