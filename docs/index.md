@@ -8,7 +8,6 @@ If others find my writings useful - great, but I am not seeking recognition.
 
 ## Sample Marimo Notebook
 
-
 ```python {marimo}
 import marimo as mo
 
@@ -22,3 +21,5 @@ data = {
 
 mo.ui.table(data, selection=None)
 ```
+
+A full notebook and documentation is linked [here](/ad-se-ipsum/assets/notebooks/test_notebook/index.html).
