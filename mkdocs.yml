@@ -8,6 +8,7 @@ plugins:
       tags_file: tags.md
   - social:
       enabled: true
+  - marimo
 
 nav:
   - Home: index.md

@@ -9,4 +9,5 @@ dependencies = [
     "jupyter",
     "openai",
     "python-dotenv>=1.0.1",
+    "mkdocs-marimo",
 ]
