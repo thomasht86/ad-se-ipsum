@@ -8,22 +8,17 @@ If others find my writings useful - great, but I am not seeking recognition.
 
 ## Sample Marimo Notebook
 
-```python {marimo}
-# This is a sample Python code snippet embedded in a Marimo notebook
-import math
-
-def calculate_circle_area(radius):
-    return math.pi * radius ** 2
-
-radius = 5
-area = calculate_circle_area(radius)
-print(f"The area of a circle with radius {radius} is {area:.2f}")
-```
 
 ```python {marimo}
-# Another sample snippet
-def greet(name):
-    return f"Hello, {name}!"
+import marimo as mo
 
-print(greet("World"))
+# define some sample data related to sales of ancient classic books
+data = {
+    "Book": ["The Great Gatsby", "Mediations", "The Art of War", "The Republic"],
+    "Author": ["F. Scott Fitzgerald", "Marcus Aurelius", "Sun Tzu", "Plato"],
+    "Sales": [100, 200, 300, 400],
+    "Price": [10, 20, 30, 40],
+}
+
+mo.ui.table(data, selection=None)
 ```

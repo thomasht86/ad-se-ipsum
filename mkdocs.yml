@@ -80,9 +80,3 @@ extra:
     Python: python
     Coding: coding
     Philosophy: philosophy
-
-# Check that the build is successful
-build:
-  steps:
-    - name: Build the site
-      run: mkdocs build
