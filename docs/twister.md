@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Three-Wheel Twister Spinner</title>
+    <title>3-Wheel Twister Spinner with Speech</title>
     <style>
         /* Basic layout and mobile-friendly setup */
         body {
@@ -20,9 +20,9 @@
         }
 
         h1 {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin: 1rem 0 0.5rem;
             font-size: 1.5rem;
+            text-align: center;
         }
 
         .wheels {
@@ -31,6 +31,7 @@
             gap: 1rem;
             justify-content: center;
             align-items: center;
+            margin-bottom: 1rem;
         }
 
         /* Common wheel styling */
@@ -49,53 +50,62 @@
 
         .pointer {
             position: absolute;
-            top: 0;
+            top: -4px;
+            /* Move up slightly to align with wheel edge */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
             height: 0;
-            border-left: 4px solid transparent;
-            border-right: 4px solid transparent;
-            border-bottom: 8px solid #333;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #333;
+            /* Changed from border-bottom to border-top */
+            z-index: 1;
+            /* Ensure pointer is above the wheel */
         }
 
         /* Wheel #1: Left / Right */
+        /* Conic gradient from 270deg means 0deg is at the top, going clockwise */
         #wheel1 {
-            background: conic-gradient(
-                    /* Top half  */
+            background: conic-gradient(from 270deg,
                     #aaf 0deg 180deg,
-                    /* Bottom half */
-                    #faa 180deg 360deg);
+                    /* Top half (Left) */
+                    #faa 180deg 360deg
+                    /* Bottom half (Right) */
+                );
         }
 
         /* Wheel #2: Hand / Foot */
         #wheel2 {
-            background: conic-gradient(
-                    /* Top half  */
+            background: conic-gradient(from 270deg,
                     #aff 0deg 180deg,
-                    /* Bottom half */
-                    #faf 180deg 360deg);
+                    /* Top half (Hand) */
+                    #faf 180deg 360deg
+                    /* Bottom half (Foot) */
+                );
         }
 
-        /* Wheel #3: 4 colors */
+        /* Wheel #3: 4 colors (Red, Blue, Green, Yellow) */
         #wheel3 {
-            background: conic-gradient(red 0deg 90deg,
+            background: conic-gradient(from 270deg,
+                    red 0deg 90deg,
                     blue 90deg 180deg,
                     green 180deg 270deg,
                     yellow 270deg 360deg);
         }
 
-        /* Text overlays for the first two wheels */
+        /* Text overlays for the first two wheels only */
         .slice-text {
             position: absolute;
             width: 100%;
             text-align: center;
             font-weight: bold;
+            color: #333;
             pointer-events: none;
-            /* allow clicks through text */
+            /* let clicks pass through text */
         }
 
-        /* For 2-slice wheels: top half text at ~25% down, bottom half text at ~75% down */
+        /* For a 2-slice wheel: "top" label ~25% down, "bottom" label ~75% down */
         .top-text {
             top: 25%;
             left: 50%;
@@ -108,6 +118,13 @@
             transform: translateX(-50%);
         }
 
+        /* Controls container */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         /* Spin button */
         .spin-button {
             background-color: #007bff;
@@ -116,7 +133,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             font-size: 1rem;
         }
 
@@ -138,6 +155,14 @@
                 width: 120px;
                 height: 120px;
             }
+
+            .top-text {
+                top: 30%;
+            }
+
+            .bottom-text {
+                top: 70%;
+            }
         }
     </style>
 </head>
@@ -153,8 +178,8 @@
             <div id="wheel1" class="wheel"></div>
             <div class="pointer"></div>
             <!-- Text overlays (top / bottom) -->
-            <div class="slice-text top-text">Left</div>
-            <div class="slice-text bottom-text">Right</div>
+            <div class="slice-text top-text">Venstre</div>
+            <div class="slice-text bottom-text">Høyre</div>
         </div>
 
         <!-- Wheel #2: Hand / Foot -->
@@ -162,28 +187,36 @@
             <div id="wheel2" class="wheel"></div>
             <div class="pointer"></div>
             <!-- Text overlays -->
-            <div class="slice-text top-text">Hand</div>
-            <div class="slice-text bottom-text">Foot</div>
+            <div class="slice-text top-text">Hånd</div>
+            <div class="slice-text bottom-text">Fot</div>
         </div>
 
-        <!-- Wheel #3: Colors (Red, Blue, Green, Yellow) -->
+        <!-- Wheel #3: Colors -->
         <div class="wheel-container">
             <div id="wheel3" class="wheel"></div>
             <div class="pointer"></div>
         </div>
     </div>
 
-    <!-- Spin Button -->
-    <button class="spin-button" onclick="spinWheels()">Spin</button>
+    <!-- Controls: Speak checkbox + Spin button -->
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="speak-toggle" />
+            <span role="img" aria-label="loudspeaker">&#128266;</span> Speak result
+        </label>
+
+        <button class="spin-button" onclick="spinWheels()">Spin</button>
+    </div>
 
     <!-- Result Display -->
     <div id="result"></div>
 
     <script>
         // Data sets for each wheel
-        const leftRight = ["Left", "Right"];
-        const handFoot = ["Hand", "Foot"];
-        const colors = ["Red", "Blue", "Green", "Yellow"];
+        const leftRight = ["Venstre", "Høyre"];
+        const handFoot = ["Hånd", "Fot"];
+        const colors = ["Rød", "Blå", "Grønn", "Gul"];
+        const synth = window.speechSynthesis;
 
         // Track cumulative rotations for each wheel
         let rotation1 = 0;
@@ -191,24 +224,17 @@
         let rotation3 = 0;
 
         function spinWheels() {
-            // For wheels #1 and #2 (2 slices each): each slice is 180 degrees
-            // For wheel #3 (4 slices): each slice is 90 degrees
+            // Each wheel does 5-8 full rotations (5*360 to 8*360),
+            // plus a random offset to land in the slice.
+            const baseRotations = 360 * (Math.floor(Math.random() * 4) + 5);
 
-            // Each wheel does 5 to 8 full rotations (5*360 to 8*360)
-            // plus a random offset to land on a slice.
-            const randomSpin1 = 360 * (Math.floor(Math.random() * 4) + 5);
-            const randomSpin2 = 360 * (Math.floor(Math.random() * 4) + 5);
-            const randomSpin3 = 360 * (Math.floor(Math.random() * 4) + 5);
-
-            // Offsets: 0 to 359
             const offset1 = Math.floor(Math.random() * 360);
             const offset2 = Math.floor(Math.random() * 360);
             const offset3 = Math.floor(Math.random() * 360);
 
-            // Update cumulative rotation
-            rotation1 += randomSpin1 + offset1;
-            rotation2 += randomSpin2 + offset2;
-            rotation3 += randomSpin3 + offset3;
+            rotation1 += baseRotations + offset1;
+            rotation2 += baseRotations + offset2;
+            rotation3 += baseRotations + offset3;
 
             // Apply CSS transforms
             document.getElementById("wheel1").style.transform =
@@ -218,28 +244,42 @@
             document.getElementById("wheel3").style.transform =
                 `rotate(${rotation3}deg)`;
 
-            // After 3s, identify the final slices
+            // After 3s, figure out which slice is on top for each wheel
             setTimeout(() => {
                 const finalAngle1 = rotation1 % 360;
                 const finalAngle2 = rotation2 % 360;
                 const finalAngle3 = rotation3 % 360;
 
-                // Wheel #1 index (2 slices): 180 degrees each
+                // 2-slice wheels: 0..180 => index 0, 180..360 => index 1
                 const index1 = Math.floor(finalAngle1 / 180);
-                // Wheel #2 index (2 slices): 180 degrees each
                 const index2 = Math.floor(finalAngle2 / 180);
-                // Wheel #3 index (4 slices): 90 degrees each
+
+                // 4-slice wheel: each slice = 90 degrees
                 const index3 = Math.floor(finalAngle3 / 90);
 
-                // Determine results
-                const part1 = leftRight[index1];    // Left or Right
-                const part2 = handFoot[index2];     // Hand or Foot
-                const color = colors[index3];       // Red, Blue, Green, Yellow
+                const side = leftRight[index1];  // "Left" or "Right"
+                const limb = handFoot[index2];   // "Hand" or "Foot"
+                const color = colors[index3];    // "Red", "Blue", "Green", "Yellow"
 
-                // Display final combination
-                document.getElementById("result").textContent =
-                    `${part1} ${part2} on ${color}`;
+                const resultText = `Sett ${side} ${limb} på ${color}`;
+                // Display the final result
+                document.getElementById("result").textContent = resultText;
+
+                // Check if the "Speak result" checkbox is checked
+                const speakToggle = document.getElementById("speak-toggle");
+                if (speakToggle.checked) {
+                    speakResult(resultText);
+                }
             }, 3000);
+        }
+
+        function speakResult(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            // You can configure more TTS options here, e.g. voice, pitch, rate
+            // set voice to Nora (nb-NO) if available, otherwise use default
+            utterance.voice = synth.getVoices().find(v => v.lang === "nb-NO") ||
+                synth.getVoices().find(v => v.lang === "en-US");
+            synth.speak(utterance);
         }
     </script>
 </body>
