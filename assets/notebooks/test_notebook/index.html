@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-CxL0S8W7.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-D9fedIX3.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" as="font" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        var scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          var element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          var hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          var newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((entries) => {
+          setHeight();
+        });
+        resizeObserver.observe(obj.contentWindow.document.body);
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <marimo-mode data-mode='read' hidden></marimo-mode>
+    <marimo-version data-version='0.10.2' hidden></marimo-version>
+    <marimo-user-config data-config='{"completion": {"activate_on_typing": true, "copilot": false}, "display": {"theme": "light", "code_editor_font_size": 14, "cell_output": "above", "default_width": "medium", "dataframes": "rich"}, "formatting": {"line_length": 79}, "keymap": {"preset": "default", "overrides": {}}, "runtime": {"auto_instantiate": true, "auto_reload": "off", "on_cell_change": "autorun"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "package_management": {"manager": "pip"}, "server": {"browser": "default", "follow_symlink": false}}' data-overrides='{}' hidden></marimo-user-config>
+    <marimo-app-config data-config='{"width": "compact"}' hidden></marimo-app-config>
+    <marimo-server-token data-token='123' hidden></marimo-server-token>
+    <title>marimo</title>
+    <script type="module" crossorigin src="./assets/index-CR8Z2sIQ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-YMVCHUS9.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    <marimo-code hidden="">import%20marimo%0A%0A__generated_with%20%3D%20%220.10.2%22%0Aapp%20%3D%20marimo.App()%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%23%20Merry%20Christmas!%20%F0%9F%8E%84%22).left()%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20This%20marimo%20notebook%20is%20%5Badapted%20from%5D(https%3A%2F%2Fisquared.digital%2Fvisualizations%2F2020-06-15-koch-curve%2F)%20Vladimir%20Ilievski's%20Jupyter%20notebook%0A%20%20%20%20%20%20%20%20for%20drawing%20snowflakes%20using%20the%20Koch%20snowflake%20algortithm%2C%20and%20was%20generated%20using%20%5Bhttps%3A%2F%2Fmarimo.io%2Fconvert%5D().%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20degree%20%3D%20mo.ui.slider(1%2C%205%2C%20label%3D%22Snowflake%20degree%22)%0A%20%20%20%20degree%0A%20%20%20%20return%20(degree%2C)%0A%0A%0A%40app.cell%0Adef%20_(degree%2C%20draw_snowflake)%3A%0A%20%20%20%20draw_snowflake(degree.value)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(koch_snowflake%2C%20plt)%3A%0A%20%20%20%20def%20draw_snowflake(d)%3A%0A%20%20%20%20%20%20%20%20_%2C%20ax%20%3D%20plt.subplots(subplot_kw%3D%7B%22aspect%22%3A%20%22equal%22%7D)%0A%20%20%20%20%20%20%20%20lines%20%3D%20koch_snowflake(degree%3Dd)%0A%0A%20%20%20%20%20%20%20%20%23%20extract%20the%20line%20coordinates%0A%20%20%20%20%20%20%20%20x%2C%20y%20%3D%20%5B%5D%2C%20%5B%5D%0A%20%20%20%20%20%20%20%20for%20l%20in%20lines%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20x.extend(%5Bl%5B%22a%22%5D%5B0%5D%2C%20l%5B%22b%22%5D%5B0%5D%2C%20l%5B%22c%22%5D%5B0%5D%2C%20l%5B%22d%22%5D%5B0%5D%2C%20l%5B%22e%22%5D%5B0%5D%5D)%0A%20%20%20%20%20%20%20%20%20%20%20%20y.extend(%5Bl%5B%22a%22%5D%5B1%5D%2C%20l%5B%22b%22%5D%5B1%5D%2C%20l%5B%22c%22%5D%5B1%5D%2C%20l%5B%22d%22%5D%5B1%5D%2C%20l%5B%22e%22%5D%5B1%5D%5D)%0A%0A%20%20%20%20%20%20%20%20%23%20remove%20all%20ticks%20and%20axes%0A%20%20%20%20%20%20%20%20ax.set_xticks(%5B%5D%2C%20%5B%5D)%0A%20%20%20%20%20%20%20%20ax.set_yticks(%5B%5D%2C%20%5B%5D)%0A%20%20%20%20%20%20%20%20ax.spines%5B%22right%22%5D.set_visible(False)%0A%20%20%20%20%20%20%20%20ax.spines%5B%22left%22%5D.set_visible(False)%0A%20%20%20%20%20%20%20%20ax.spines%5B%22top%22%5D.set_visible(False)%0A%20%20%20%20%20%20%20%20ax.spines%5B%22bottom%22%5D.set_visible(False)%0A%0A%20%20%20%20%20%20%20%20%23%20fill%20the%20polygons%0A%20%20%20%20%20%20%20%20ax.fill(x%2C%20y%2C%20color%3D%22white%22%2C%20edgecolor%3D%22black%22%2C%20lw%3D1)%0A%20%20%20%20%20%20%20%20return%20ax%0A%20%20%20%20return%20(draw_snowflake%2C)%0A%0A%0A%40app.cell%0Adef%20_(np)%3A%0A%20%20%20%20def%20koch_line(start%2C%20end%2C%20factor)%3A%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20Segments%20a%20line%20to%20Koch%20line%2C%20creating%20fractals.%0A%0A%0A%20%20%20%20%20%20%20%20%3Aparam%20tuple%20start%3A%20%20(x%2C%20y)%20coordinates%20of%20the%20starting%20point%0A%20%20%20%20%20%20%20%20%3Aparam%20tuple%20end%3A%20(x%2C%20y)%20coordinates%20of%20the%20end%20point%0A%20%20%20%20%20%20%20%20%3Aparam%20float%20factor%3A%20the%20multiple%20of%20sixty%20degrees%20to%20rotate%0A%20%20%20%20%20%20%20%20%3Areturns%20tuple%3A%20tuple%20of%20all%20points%20of%20segmentation%0A%20%20%20%20%20%20%20%20%22%22%22%0A%0A%20%20%20%20%20%20%20%20%23%20coordinates%20of%20the%20start%0A%20%20%20%20%20%20%20%20x1%2C%20y1%20%3D%20start%5B0%5D%2C%20start%5B1%5D%0A%0A%20%20%20%20%20%20%20%20%23%20coordinates%20of%20the%20end%0A%20%20%20%20%20%20%20%20x2%2C%20y2%20%3D%20end%5B0%5D%2C%20end%5B1%5D%0A%0A%20%20%20%20%20%20%20%20%23%20the%20length%20of%20the%20line%0A%20%20%20%20%20%20%20%20l%20%3D%20np.sqrt((x2%20-%20x1)%20**%202%20%2B%20(y2%20-%20y1)%20**%202)%0A%0A%20%20%20%20%20%20%20%20%23%20first%20point%3A%20same%20as%20the%20start%0A%20%20%20%20%20%20%20%20a%20%3D%20(x1%2C%20y1)%0A%0A%20%20%20%20%20%20%20%20%23%20second%20point%3A%20one%20third%20in%20each%20direction%20from%20the%20first%20point%0A%20%20%20%20%20%20%20%20b%20%3D%20(x1%20%2B%20(x2%20-%20x1)%20%2F%203.0%2C%20y1%20%2B%20(y2%20-%20y1)%20%2F%203.0)%0A%0A%20%20%20%20%20%20%20%20%23%20third%20point%3A%20rotation%20for%20multiple%20of%2060%20degrees%0A%20%20%20%20%20%20%20%20c%20%3D%20(%0A%20%20%20%20%20%20%20%20%20%20%20%20b%5B0%5D%20%2B%20l%20%2F%203.0%20*%20np.cos(factor%20*%20np.pi%20%2F%203.0)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20b%5B1%5D%20%2B%20l%20%2F%203.0%20*%20np.sin(factor%20*%20np.pi%20%2F%203.0)%2C%0A%20%20%20%20%20%20%20%20)%0A%0A%20%20%20%20%20%20%20%20%23%20fourth%20point%3A%20two%20thirds%20in%20each%20direction%20from%20the%20first%20point%0A%20%20%20%20%20%20%20%20d%20%3D%20(x1%20%2B%202.0%20*%20(x2%20-%20x1)%20%2F%203.0%2C%20y1%20%2B%202.0%20*%20(y2%20-%20y1)%20%2F%203.0)%0A%0A%20%20%20%20%20%20%20%20%23%20the%20last%20point%0A%20%20%20%20%20%20%20%20e%20%3D%20end%0A%0A%20%20%20%20%20%20%20%20return%20%7B%22a%22%3A%20a%2C%20%22b%22%3A%20b%2C%20%22c%22%3A%20c%2C%20%22d%22%3A%20d%2C%20%22e%22%3A%20e%2C%20%22factor%22%3A%20factor%7D%0A%20%20%20%20return%20(koch_line%2C)%0A%0A%0A%40app.cell%0Adef%20_(functools%2C%20koch_line%2C%20np)%3A%0A%20%20%20%20%40functools.cache%0A%20%20%20%20def%20koch_snowflake(degree%2C%20s%3D5.0)%3A%0A%20%20%20%20%20%20%20%20%22%22%22Generates%20all%20lines%20for%20a%20Koch%20Snowflake%20with%20a%20given%20degree.%0A%0A%20%20%20%20%20%20%20%20%3Aparam%20int%20degree%3A%20how%20deep%20to%20go%20in%20the%20branching%20process%0A%20%20%20%20%20%20%20%20%3Aparam%20float%20s%3A%20the%20length%20of%20the%20initial%20equilateral%20triangle%0A%20%20%20%20%20%20%20%20%3Areturns%20list%3A%20list%20of%20all%20lines%20that%20form%20the%20snowflake%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%23%20all%20lines%20of%20the%20snowflake%0A%20%20%20%20%20%20%20%20lines%20%3D%20%5B%5D%0A%0A%20%20%20%20%20%20%20%20%23%20we%20rotate%20in%20multiples%20of%2060%20degrees%0A%20%20%20%20%20%20%20%20sixty_degrees%20%3D%20np.pi%20%2F%203.0%0A%0A%20%20%20%20%20%20%20%20%23%20vertices%20of%20the%20initial%20equilateral%20triangle%0A%20%20%20%20%20%20%20%20A%20%3D%20(0.0%2C%200.0)%0A%20%20%20%20%20%20%20%20B%20%3D%20(s%2C%200.0)%0A%20%20%20%20%20%20%20%20C%20%3D%20(s%20*%20np.cos(sixty_degrees)%2C%20s%20*%20np.sin(sixty_degrees))%0A%0A%20%20%20%20%20%20%20%20%23%20set%20the%20initial%20lines%0A%20%20%20%20%20%20%20%20if%20degree%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(A%2C%20B%2C%200))%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(B%2C%20C%2C%202))%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(C%2C%20A%2C%204))%0A%20%20%20%20%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(A%2C%20B%2C%205))%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(B%2C%20C%2C%201))%0A%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(C%2C%20A%2C%203))%0A%0A%20%20%20%20%20%20%20%20for%20i%20in%20range(1%2C%20degree)%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%20every%20lines%20produce%204%20more%20lines%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20_%20in%20range(3%20*%204%20**%20(i%20-%201))%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20line%20%3D%20lines.pop(0)%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20factor%20%3D%20line%5B%22factor%22%5D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(line%5B%22a%22%5D%2C%20line%5B%22b%22%5D%2C%20factor%20%25%206))%20%20%23%20a%20to%20b%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lines.append(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20koch_line(line%5B%22b%22%5D%2C%20line%5B%22c%22%5D%2C%20(factor%20-%201)%20%25%206)%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20)%20%20%23%20b%20to%20c%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lines.append(%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20koch_line(line%5B%22c%22%5D%2C%20line%5B%22d%22%5D%2C%20(factor%20%2B%201)%20%25%206)%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20)%20%20%23%20d%20to%20c%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lines.append(koch_line(line%5B%22d%22%5D%2C%20line%5B%22e%22%5D%2C%20factor%20%25%206))%20%20%23%20d%20to%20e%0A%0A%20%20%20%20%20%20%20%20return%20lines%0A%20%20%20%20return%20(koch_snowflake%2C)%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20return%20(mo%2C)%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20functools%0A%20%20%20%20import%20numpy%20as%20np%0A%20%20%20%20import%20matplotlib.pyplot%20as%20plt%0A%20%20%20%20return%20functools%2C%20np%2C%20plt%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
