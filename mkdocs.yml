@@ -17,6 +17,7 @@ nav:
   - Writings: writings/index.md
   - Tags: tags.md
   - Contact: contact.md
+  - Twister: twister.md
 
 theme:
   name: material
